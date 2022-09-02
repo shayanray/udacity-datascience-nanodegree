@@ -1,14 +1,21 @@
 ## Project Title
 udacity-datascience-nanodegree AirBnb Seattle Dataset analysis for Shayan Ray
 
-## Insights
+## Motivation of the project
 https://shayan-ray.medium.com/sleepless-or-sleep-more-in-seattle-6bb748075a4f
 
-Gathering data driven insights for these questions:
+The goal of this project was to gathering data driven insights for these questions:
 Explore Data to find family friendly neighborhoods [done]
 Top reasons for getting high review scores [done]
 Predict review scores
 
+
+## Files in the repository
+README.md - this file describes the project details
+calendar.csv.zip - zipped CSV file for calendar data of Airbnb listing
+listings.csv.zip - zipped CSV file for Seattle Airbnb listings
+reviews.csv.zip - zipped CSV file for Seattle Airbnb customer reviews
+airbnb-seattle-data-analysis.ipynb - jupyter notebook for data driven insights
 
 ## Build Status
 
@@ -43,6 +50,10 @@ Not applicable
 
 ## Credits
 Thanks to udacity for such interesting assignments as part of the datascience nanodegree program
+
+## Acknowledgements
+Datasets: https://www.kaggle.com/datasets/airbnb/seattle
+
 
 ## License
 MIT © Shayan Ray
