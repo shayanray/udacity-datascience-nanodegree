@@ -11,11 +11,12 @@ Predict review scores
 
 
 ## Files in the repository
-README.md - this file describes the project details
-calendar.csv.zip - zipped CSV file for calendar data of Airbnb listing
-listings.csv.zip - zipped CSV file for Seattle Airbnb listings
-reviews.csv.zip - zipped CSV file for Seattle Airbnb customer reviews
-airbnb-seattle-data-analysis.ipynb - jupyter notebook for data driven insights
+
+- README.md - this file describes the project details
+- calendar.csv.zip - zipped CSV file for calendar data of Airbnb listing
+- listings.csv.zip - zipped CSV file for Seattle Airbnb listings
+- reviews.csv.zip - zipped CSV file for Seattle Airbnb customer reviews
+- airbnb-seattle-data-analysis.ipynb - jupyter notebook for data driven insights
 
 ## Build Status
 
