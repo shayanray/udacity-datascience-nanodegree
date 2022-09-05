@@ -2,15 +2,18 @@ import json
 import plotly
 import pandas as pd
 
+import nltk
 from nltk.stem import WordNetLemmatizer
 from nltk.tokenize import word_tokenize
+nltk.download('stopwords')
 
 from flask import Flask
 from flask import render_template, request, jsonify
 from plotly.graph_objs import Bar
 from sklearn.externals import joblib
 from sqlalchemy import create_engine
-
+from nltk.corpus import stopwords
+stop_words = set(stopwords.words('english'))
 
 app = Flask(__name__)
 
@@ -21,7 +24,8 @@ def tokenize(text):
     clean_tokens = []
     for tok in tokens:
         clean_tok = lemmatizer.lemmatize(tok).lower().strip()
-        clean_tokens.append(clean_tok)
+        if clean_tok not in stop_words:
+            clean_tokens.append(clean_tok)
 
     return clean_tokens
 
@@ -43,6 +47,12 @@ def index():
     genre_counts = df.groupby('genre').count()['message']
     genre_names = list(genre_counts.index)
     
+    df_categories = df.iloc[:, 4:]
+    category_names = df_categories.columns
+    category_counts= df_categories.sum(axis=0)
+
+    
+    
     # create visuals
     # TODO: Below is an example - modify to create your own visuals
     graphs = [
@@ -61,6 +71,24 @@ def index():
                 },
                 'xaxis': {
                     'title': "Genre"
+                }
+            }
+        },
+        {
+            'data': [
+                Bar(
+                    x=category_names,
+                    y=category_counts
+                )
+            ],
+
+            'layout': {
+                'title': 'Distribution of Message Categories',
+                'yaxis': {
+                    'title': "Count"
+                },
+                'xaxis': {
+                    'title': "Category"
                 }
             }
         }

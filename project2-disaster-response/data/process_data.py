@@ -3,6 +3,18 @@ import pandas as pd
 from sqlalchemy import create_engine
 
 def load_data(messages_filepath, categories_filepath):
+    '''
+    load_data
+    Load data from csv files and merge into a single pandas dataframe
+    
+    Input:
+    messages_filepath       file path to messages.csv
+    categories_filepath     file path to categories.csv
+    
+    Returns:
+    df                      merged dataframe of messages and categories
+    
+    '''
     messages = pd.read_csv(messages_filepath)
     categories = pd.read_csv(categories_filepath)
     df = messages.merge(categories, on="id")
@@ -33,6 +45,17 @@ def load_data(messages_filepath, categories_filepath):
 
 
 def clean_data(df):
+    '''
+    clean_data
+    dedup data from dataframe
+    
+    Input:
+    df                      merged dataframe of messages and categories
+    
+    Returns:
+    df                      merged dataframe of messages and categories
+    
+    '''
     # check number of duplicates
     df.duplicated().sum()
     
@@ -45,8 +68,20 @@ def clean_data(df):
     return df
 
 def save_data(df, database_filename):
+    '''
+    save_data
+    save dataframe into sqllite database table
+    
+    Input:
+    df                      merged dataframe of messages and categories
+    database_filename       file path to custom sqllite db file
+    
+    Returns:
+    None
+    
+    '''
     engine = create_engine('sqlite:///' + database_filename) # TODO check file path
-    df.to_sql('InsertTableName', engine, index=False) 
+    df.to_sql('InsertTableName', engine, index=False, if_exists='replace') 
 
 
 def main():
