@@ -13,22 +13,22 @@ The goal of this project was to:
 
 app
 
-| - template
-| |- master.html        # web app landing page 
-| |- go.html            # classification results
-|- run.py               # Flask file to run web-app
+- - template
+- - - master.html        # web app landing page 
+- - - go.html            # classification results
+- - run.py               # Flask file to run web-app
 
 data
 
-|- disaster_categories.csv  # input data
-|- disaster_messages.csv    # input data
-|- process_data.py          # etl pipeline
-|- InsertDatabaseName.db    # sqllite db
+- - disaster_categories.csv  # input data
+- - disaster_messages.csv    # input data
+- - process_data.py          # etl pipeline
+- - InsertDatabaseName.db    # sqllite db
 
 models
 
-|- train_classifier.py # machine learning pipeline
-|- classifier.pkl # saved model
+- - train_classifier.py # machine learning pipeline
+- - classifier.pkl # saved model
 
 README.md
 ## Build Status
