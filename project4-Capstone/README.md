@@ -6,6 +6,8 @@ udacity-datascience-capstone Sparkify project  for Shayan Ray
 The goal of this project was to:
 - perform Churn prediction for users using a music app . The data used was a subset (128MB) of the full dataset available (12GB).
 
+Medium blog: https://shayan-ray.medium.com/to-churn-or-not-to-churn-b2d39d36a750
+
 ## Files in the repository
 
 - README.md - this file describes the project details
