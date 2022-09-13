@@ -61,7 +61,7 @@ Useful features for model building
 - - number of friends added per userId
 - - number of days after initial registration per userId
 
-Based on the size of the dataset used and features generated and limited experiments performed,  RandomForestsClassifier appears to be a decent choice for churn prediction with a F1 score of 0.84 on the training dataset.
+Based on the size of the dataset used and features generated and limited experiments performed, RandomForestsClassifier appears to be a decent choice for churn prediction with a F1 score of 0.5121 on the validation dataset. (7 churned users and 13 not-churned users)
 
 
 ## How to use
