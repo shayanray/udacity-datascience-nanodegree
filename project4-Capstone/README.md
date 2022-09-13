@@ -42,6 +42,28 @@ Not applicable
 ## Tests
 Not applicable
 
+## summary of the results of the analysis
+Based on exploratory data analysis I have used the following features to come up with a model for churn prediction
+
+Useful features for model building
+
+#### Categorical:
+- - gender
+- - level
+
+#### Numerical:
+- - number of unique songs played per userId
+- - number of total songs played per userId
+- - number of unique artists per userId
+- - number of Ads action per userId
+- - number of thumb down action per userId
+- - number of thumbs up action per userId
+- - number of friends added per userId
+- - number of days after initial registration per userId
+
+Based on the size of the dataset used and features generated and limited experiments performed,  RandomForestsClassifier appears to be a decent choice for churn prediction with a F1 score of 0.84 on the training dataset.
+
+
 ## How to use
 As a reference for understanding the implementation
 
